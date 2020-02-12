@@ -7,7 +7,7 @@ import java.util.Date;
 public class Emprunt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @ManyToOne
     private Livre livre;
     @Temporal(TemporalType.DATE)

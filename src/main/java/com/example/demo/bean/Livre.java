@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Livre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String isbn;
     private String titre;
     private int nbrExemplaire;

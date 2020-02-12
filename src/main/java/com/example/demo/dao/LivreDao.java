@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LivreDao extends JpaRepository<Livre,Long> {
+    public Livre findByIsbn(String isbn);
 }

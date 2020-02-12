@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String cin;
     private int pointFiabilite;
 

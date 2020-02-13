@@ -13,6 +13,15 @@ public class Client {
     private String cin;
     private int pointFiabilite;
 
+    public Client(long id, String cin, int pointFiabilite) {
+        this.id = id;
+        this.cin = cin;
+        this.pointFiabilite = pointFiabilite;
+    }
+
+    public Client() {
+    }
+
     public long getId() {
         return id;
     }
@@ -35,14 +44,5 @@ public class Client {
 
     public void setPointFiabilite(int pointFiabilite) {
         this.pointFiabilite = pointFiabilite;
-    }
-
-    public Client(long id,String cin,int pointFiabilite) {
-        this.id=id;
-        this.cin=cin;
-        this.pointFiabilite=pointFiabilite;
-    }
-
-    public Client() {
     }
 }

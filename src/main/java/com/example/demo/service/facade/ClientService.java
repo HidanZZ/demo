@@ -8,4 +8,5 @@ public interface ClientService {
     public Client findBycin(String cin);
     public List<Client> findByPointFiabiliteLessThan(int pointFiabilite);
     public List<Client> findNonFiableCLients();
+    public int save(Client client);
 }

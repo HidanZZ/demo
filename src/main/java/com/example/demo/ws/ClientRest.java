@@ -3,10 +3,7 @@ package com.example.demo.ws;
 import com.example.demo.bean.Client;
 import com.example.demo.service.facade.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("demo/Client")
@@ -16,5 +13,9 @@ public class ClientRest {
     @GetMapping("/cin/{cin}")
     public Client findByCin(@PathVariable String cin){
         return clientService.findBycin(cin);
+    }
+    @PostMapping("/save")
+    public int save(@RequestBody Client client){
+        return clientService.save(client);
     }
 }

@@ -55,7 +55,7 @@ public class EmpruntServiceImpl  implements EmpruntService{
             return -2;
         }else if (livreService.findByIsbn(emprunt.getLivre().getIsbn())==null){
             return -3;
-        }else if (emprunt.getLivre().getNbrExemplaire()==0){
+        }else if (livreService.findByIsbn(emprunt.getLivre().getIsbn()).getNbrExemplaire()==0){
             return -4;
         }else{
             Date actualtime=new Date();

@@ -28,5 +28,15 @@ public class ClientServiceImpl implements ClientService {
         return findByPointFiabiliteLessThan(5);
     }
 
+    @Override
+    public int save(Client client) {
+        if (findBycin(client.getCin())!=null){
+            return -1;
+        }else{
+            clientDao.save(client);
+            return 1;
+        }
+    }
+
 
 }
